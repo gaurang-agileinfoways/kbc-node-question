@@ -84,7 +84,6 @@ export class QuestionService {
       const skip = (page - 1) * limit;
       const { search, sortOrder, sortBy } = body;
 
-      console.log('body: ', body);
       const query = [];
 
       if (search) {
@@ -96,7 +95,7 @@ export class QuestionService {
               {
                 option: {
                   $elemMatch: {
-                    $regex: 'only',
+                    $regex: search,
                     $options: 'i',
                   },
                 },
