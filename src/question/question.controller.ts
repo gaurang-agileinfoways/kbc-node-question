@@ -34,14 +34,4 @@ export class QuestionController {
   findOne(@Payload() body: any) {
     return this.questionService.findOne(body._id);
   }
-
-  // @MessagePattern('updateQuestion')
-  // update(@Payload() updateQuestionDto: UpdateQuestionDto) {
-  //   return this.questionService.update(updateQuestionDto.id, updateQuestionDto);
-  // }
-
-  // @MessagePattern('removeQuestion')
-  // remove(@Payload() id: number) {
-  //   return this.questionService.remove(id);
-  // }
 }
